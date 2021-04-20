@@ -22,14 +22,34 @@
     font-weight: 400;
 }
 
-.progress {
+.stopwatch {
+    --stopwatch-size: 250px;
     border-radius: 50%;
     border: 15px solid #00FFC2;
-    height: 250px;
-    width: 250px;
+    height: var(--stopwatch-size);
+    width: var(--stopwatch-size);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.pause-animation {
+    --glow-size: 25px;
+    animation: pulse 0.5s linear infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 var(--glow-size) #00FFc2;
+    }
+
+    100% {
+        box-shadow: 0 0 calc(var(--glow-size) * 2) #00FFc2;
+    }
 }
 
 .time {
@@ -95,9 +115,8 @@
         font-size: 32px;
     }
 
-    .progress {
-        height: 150px;
-        width: 150px;
+    .stopwatch {
+        --stopwatch-size: 150px;
         border-width: 10px;
     }
 
@@ -117,14 +136,17 @@
         font-size: 64px;
     }
 
-    .progress {
-        height: 400px;
-        width: 400px;
+    .stopwatch {
+        --stopwatch-size: 400px;
         border-width: 25px;
     }
 
     .time {
         font-size: 64px;
+    }
+
+    .pause-animation {
+        --glow-size: 50px;
     }
 }
 
