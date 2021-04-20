@@ -37,15 +37,33 @@
     font-size: 48px;
 }
 
+.milliseconds {
+    font-size: 0.8em;
+}
+
 .control-btn {
     border: none;
     background-color: transparent;
+    outline: none;
+}
+
+.control-btn:hover .icon {
+    cursor: pointer;
 }
 
 .icon {
     color: white;
     font-size: 36px;
 }
+
+.inactive {
+    opacity: 0.3;
+}
+
+.inactive:hover .icon {
+    cursor: default;
+  }
+  
 
 /* Small devices in landscape */
 @media (orientation: landscape) and (max-height: 500px) {

@@ -15,17 +15,17 @@
 <body>
     <div class="container">
         <h1 class="heading">Stopwatch</h1>
-        <div class="progress">
-            <div class="time"><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="miliseconds">00</span></div>
+        <div class="progress" id="progress">
+            <div class="time"><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds" class="milliseconds">00</span></div>
         </div>
         <div class="controls">
-            <button class="control-btn" aria-label="pause"><span class="material-icons icon">
+            <button class="control-btn inactive" aria-label="pause" id="pauseBtn"><span class="material-icons icon">
                 pause
                 </span></button>
-            <button class="control-btn" aria-label="start"><span class="material-icons icon">
+            <button class="control-btn" aria-label="start" id="startBtn"><span class="material-icons icon">
                 play_arrow
                 </span></button>
-            <button class="control-btn" aria-label="reset"><span class="material-icons icon">
+            <button class="control-btn inactive" aria-label="reset" id="resetBtn"><span class="material-icons icon">
                 refresh
                 </span></button>
         </div>
