@@ -1,0 +1,90 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.heading {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
+
+.progress {
+    border-radius: 50%;
+    border: 15px solid #00FFC2;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+}
+
+.control-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.icon {
+    color: white;
+    font-size: 36px;
+}
+
+/* Small devices in landscape */
+@media (orientation: landscape) and (max-height: 500px) {
+
+    .heading {
+        font-size: 32px;
+    }
+
+    .progress {
+        height: 150px;
+        width: 150px;
+        border-width: 10px;
+    }
+
+    .time {
+        font-size: 28px;
+    }
+}
+
+/* larger screens*/
+@media (min-width: 750px) and (min-height: 750px) {
+    .heading {
+        font-size: 64px;
+    }
+
+    .progress {
+        height: 400px;
+        width: 400px;
+        border-width: 25px;
+    }
+
+    .time {
+        font-size: 64px;
+    }
+
+    .icon {
+        font-size: 48px;
+    }
+}
+
+
+
