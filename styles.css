@@ -19,6 +19,7 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
+    font-weight: 400;
 }
 
 .progress {
@@ -45,28 +46,50 @@
     border: none;
     background-color: transparent;
     outline: none;
+    transition: transform ease-in 0.2s;
 }
 
-.control-btn:hover .icon {
+.control-btn:hover {
     cursor: pointer;
+    transform: scale(1.2);
 }
 
-.icon {
-    color: white;
-    font-size: 36px;
+.pause-btn {
+    background: url("images/control_icons.png") 48px 0;
+    height: 48px;
+    width: 48px;
 }
+
+.start-btn {
+    background: url("images/control_icons.png") 0 0;
+    height: 48px;
+    width: 48px;
+}
+
+.reset-btn {
+    background: url("images/control_icons.png") 96px 0;
+    height: 48px;
+    width: 48px;
+}
+
 
 .inactive {
     opacity: 0.3;
 }
 
-.inactive:hover .icon {
+.inactive:hover {
     cursor: default;
+    transform: none
   }
   
 
 /* Small devices in landscape */
 @media (orientation: landscape) and (max-height: 500px) {
+
+    .container {
+            padding: 10px 0;
+        }
+    
 
     .heading {
         font-size: 32px;
@@ -85,6 +108,11 @@
 
 /* larger screens*/
 @media (min-width: 750px) and (min-height: 750px) {
+
+    .container {
+        padding-bottom: 50px;
+    }
+
     .heading {
         font-size: 64px;
     }
@@ -97,10 +125,6 @@
 
     .time {
         font-size: 64px;
-    }
-
-    .icon {
-        font-size: 48px;
     }
 }
 
