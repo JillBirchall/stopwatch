@@ -1,154 +1,151 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    background-color: black;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .heading {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
-    font-weight: 400;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
 }
 
 .stopwatch {
-    --stopwatch-size: 250px;
-    border-radius: 50%;
-    border: 15px solid #00FFC2;
-    height: var(--stopwatch-size);
-    width: var(--stopwatch-size);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  --stopwatch-size: 250px;
+  border-radius: 50%;
+  border: 15px solid #00ffc2;
+  height: var(--stopwatch-size);
+  width: var(--stopwatch-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pause-animation {
-    --glow-size: 25px;
-    animation: pulse 0.5s linear infinite alternate;
+  --glow-size: 25px;
+  animation: pulse 0.5s linear infinite alternate;
 }
 
 @keyframes pulse {
-    0% {
-        box-shadow: none;
-    }
+  0% {
+    box-shadow: none;
+  }
 
-    50% {
-        box-shadow: 0 0 var(--glow-size) #00FFc2;
-    }
+  50% {
+    box-shadow: 0 0 var(--glow-size) #00ffc2;
+  }
 
-    100% {
-        box-shadow: 0 0 calc(var(--glow-size) * 2) #00FFc2;
-    }
+  100% {
+    box-shadow: 0 0 calc(var(--glow-size) * 2) #00ffc2;
+  }
 }
 
 .time {
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 48px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
 }
 
 .milliseconds {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 .control-btn {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    transition: transform ease-in 0.2s;
-}
-
-.control-btn:hover {
-    cursor: pointer;
-    transform: scale(1.2);
+  border: none;
+  background-color: transparent;
+  outline: none;
+  transition: transform ease-in 0.2s;
 }
 
 .pause-btn {
-    background: url("images/control_icons.png") 48px 0;
-    height: 48px;
-    width: 48px;
+  background: url("images/control_icons.png") 48px 0;
+  height: 48px;
+  width: 48px;
 }
 
 .start-btn {
-    background: url("images/control_icons.png") 0 0;
-    height: 48px;
-    width: 48px;
+  background: url("images/control_icons.png") 0 0;
+  height: 48px;
+  width: 48px;
 }
 
 .reset-btn {
-    background: url("images/control_icons.png") 96px 0;
-    height: 48px;
-    width: 48px;
+  background: url("images/control_icons.png") 96px 0;
+  height: 48px;
+  width: 48px;
 }
-
 
 .inactive {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
-.inactive:hover {
-    cursor: default;
-    transform: none
+/* Only use hover effects if the device supports hover to prevent issues with touchscreens */
+@media (hover: hover) {
+  .control-btn:hover {
+    cursor: pointer;
+    transform: scale(1.2);
   }
-  
+
+  .inactive:hover {
+    cursor: default;
+    transform: none;
+  }
+}
 
 /* Small devices in landscape */
 @media (orientation: landscape) and (max-height: 500px) {
+  .container {
+    padding: 10px 0;
+  }
 
-    .container {
-            padding: 10px 0;
-        }
-    
+  .heading {
+    font-size: 32px;
+  }
 
-    .heading {
-        font-size: 32px;
-    }
+  .stopwatch {
+    --stopwatch-size: 150px;
+    border-width: 10px;
+  }
 
-    .stopwatch {
-        --stopwatch-size: 150px;
-        border-width: 10px;
-    }
-
-    .time {
-        font-size: 28px;
-    }
+  .time {
+    font-size: 28px;
+  }
 }
 
 /* larger screens*/
 @media (min-width: 750px) and (min-height: 750px) {
+  .container {
+    padding-bottom: 50px;
+  }
 
-    .container {
-        padding-bottom: 50px;
-    }
+  .heading {
+    font-size: 64px;
+  }
 
-    .heading {
-        font-size: 64px;
-    }
+  .stopwatch {
+    --stopwatch-size: 400px;
+    border-width: 25px;
+  }
 
-    .stopwatch {
-        --stopwatch-size: 400px;
-        border-width: 25px;
-    }
+  .time {
+    font-size: 64px;
+  }
 
-    .time {
-        font-size: 64px;
-    }
-
-    .pause-animation {
-        --glow-size: 50px;
-    }
+  .pause-animation {
+    --glow-size: 50px;
+  }
 }
-
-
-
