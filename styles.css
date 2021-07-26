@@ -20,7 +20,7 @@
 
 .heading {
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 48px;
   font-weight: 400;
 }
@@ -57,7 +57,7 @@
 
 .time {
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Tahoma, Arial, sans-serif;
   font-size: 48px;
 }
 
